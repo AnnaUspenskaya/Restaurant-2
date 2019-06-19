@@ -1,0 +1,85 @@
+
+/* Creator:Anna Uspenskaya
+Date created: October 23, 2018
+Date last modified */
+
+body{
+  font-family: 'Amatic SC', cursive;
+  font-size:1.1em;
+  color:midnightblue;
+}
+.carousel-inner img{
+  width:100%;
+  height:100%;
+}
+.center {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.carousel-caption{
+  font-size:1.1em;
+  color:midnightblue;
+  font-family: 'Baloo Bhaijaan', cursive;
+text-shadow: white 1px 0 10px;
+color:midnightblue;
+font-size:1.1em;
+}
+ footer{
+  background-color:rgb(255,255,109);
+  height:130px;
+  font-weight:bold;
+  font-size:1.3em;
+  text-align:center;
+}
+
+h2{
+  font-size:1.2em;
+}
+
+
+body{
+  background-attachment: fixed;
+  background-color: rgb(165,250,230);
+  background-image:url("pic/dot.png");
+  margin:0 auto;
+}
+footer img{
+  foat:left;
+}
+footer{
+  background-image:url("pic/footer.png");
+  background-repeat:no-repeat;
+  margin-bottom:0px;
+}
+/* div {
+  text-align:left
+} */
+nav{
+  text-align:center;
+  font-size:2em;
+ background-color:rgb(255,255,109,0.5);
+}
+nav .btn {
+  background-color:rgb(252,31,70);
+}
+nav a {
+  text-decoration:none;
+  padding:0 50px;
+}
+a:hover {
+ font-weight:bold;
+}
+a:visited {
+  color:green;
+}
+a:active{
+  text-decoration:underline;
+}
+.modal.show  {
+  display:flex!important;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  align-items: flex-start;
+}

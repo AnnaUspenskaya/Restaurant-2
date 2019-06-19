@@ -1,0 +1,178 @@
+
+<!-- Creator:Anna Uspenskaya
+Date created: October 23, 2018
+Date last modified November 2,2018-->
+
+<!DOCTYPE html>
+<html lnag="en">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="restaurantStyle1.css">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+<title>Contact Page</title>
+</head>
+<body>
+  <div class="container-fluid">
+
+  <header id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="pic/header.jpg" alt="sea shore" width="100%" height="300">
+      <div class="carousel-caption">
+        <h1>ANNA'S RESTAURANT</h1>
+      </div>
+    </div>
+      <div class="carousel-item">
+        <img src="pic/seasonal.jpg" alt="Seasonal menu" width="100%" height="300">
+        <div class="carousel-caption">
+          <h2>We're rolling out our seasonal menu, with special options for this season.</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="pic/brew.jpg" alt="Special Brew" width="100%" height="300">
+        <div class="carousel-caption">
+          <h2>The Drink of the Month is SG Special Brew</h2>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+    <style>
+form {
+  font-size:1.2em;
+}
+textarea, input [type=radio], input[type=text], input[type=number], button[type=submit], input [type=checkbox], button[type=button]{
+  border:2px dotted red;
+  width:50%;
+  padding:8px 8px;
+  margin:12px 0;
+
+}
+textarea{
+  width:80%;
+  height:200px;
+resize:none;
+}
+button[type=submit]:hover{
+  background-color:rgb(255,255,109);
+  cursor:pointer;
+  color:midnightblue;
+}
+button[type=button]:hover{
+  background-color:rgb(255,255,109);
+  cursor:pointer;
+  color:midnightblue;
+}
+form lable{
+  font-weight:bold;
+}
+input[type=checkbox]:checked+lable{
+  text-decoration:underline;
+  font-weight:bold;
+}
+input[type=radio]:checked+lable{
+  text-decoration:underline;
+  font-weight:bold;
+}
+</style>
+
+  </header>
+
+
+
+  <nav class="nav nav-tabs nav-fill justify-content-center">
+  <a class="nav-link" class="nav-item" class="octicon octicon-home" href="index.html"><i class="fab fa-fort-awesome-alt"></i>
+  Home</a>
+  <a class="nav-link" class="nav-item" href="menu.html">Menu</a>
+  <a class="nav-link" class="nav-item" href="contact.html">Contact Us</a>
+  </nav>
+
+<center>
+  <div id='form' class ="col-lg-10 col-xs-10 col-md-10">
+<form name="contactForm" onsubmit="return validateItems()">
+<div class="form-group">
+  <strong>The first three fields are required.</strong><br>
+  <lable for="name" class="required">Name:</lable>
+  <input type="text" id="name" name="name" required placeholder="Name"><br />
+</div>
+  <lable for="email" >Email:</lable>
+  <input type="text" id="email" name="email" required placeholder="email@example.com"><br />
+  <lable for="phone">Phone:</lable>
+  <input type="number" id="phone" name="phone" class="form-group" class="form-control" required placeholder="xxxxxxxxxx" ><br />
+  <lable for="inquiry">Reason for Inquiry</lable>
+<select id="inquiry" name="inquiry">
+  <option value="default" selected>Catering</option>
+  <option value="party">Private party</option>
+  <option value="carrer">Carrer</option>
+  <option value="complaints">Complaints</option><br />
+</select><br /><br/>
+  <lable for='info'>Additional Infomation:</lable><br>
+  <textarea id="info" name="info"></textarea><br />
+  <lable for="visit">
+    Have you been to the restaurant?
+  </lable>
+  <input type="radio" id="yes" name="visit"> <lable for="yes">yes</lable> <input type="radio" id="no" name="visit"> <lable for="no">No</lable> <br />
+   <lable for='contactDay'>
+    Best day to contact you:
+    <input type="checkbox"  id='contactDay' value="monday" name="day"> <lable for="monday">M</lable>
+  <input type="checkbox" id="contactDay" value="tuesday" name="day"><lable for="tuesday">T</lable>
+    <input type="checkbox" id="contactDay" value="wednesday" name="day"><lable for="wednesday">W</lable>
+    <input type="checkbox" id="contactDay" value="thursday" name="day"><lable for="thursday">Th</lable>
+    <input type="checkbox" id="contactDay" value="friday" name="day"><lable for="friday">F</lable>
+<br />
+<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal"  id="myBtn" onclick="return validateItems()">
+
+  <!-- onclick="thankYou()" -->
+  Submit
+</button>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"  id="modalTitle" style="color:red">Your contact form can not be submitted!</h4>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" >
+        <p id="done">Please, fill out all required fields.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+
+<footer>
+  55 Main St, New York, NY, 10001 <br />
+  +1(555)555-0678
+</footer>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
