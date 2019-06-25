@@ -10,7 +10,7 @@ body{
 }
 .carousel-inner img{
   width:100%;
-  height:100%;
+/*  height:50px;*/
 }
 .center {
   display:block;
@@ -82,4 +82,7 @@ a:active{
   justify-content:center;
   align-content:center;
   align-items: flex-start;
+}
+.jumbotron{
+    height: 200px;
 }
